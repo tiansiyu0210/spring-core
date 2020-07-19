@@ -1,4 +1,4 @@
-package iocOverview.denpendencyLookup;
+package iocOverview.dependencyLookup;
 
 import iocOverview.annoation.Super;
 import iocOverview.domain.User;
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.sql.SQLOutput;
 import java.util.Map;
 
 //lookup by name/id
@@ -26,7 +25,7 @@ public class DependencyLookupDemo {
         //我自己用@Bean annotation 试一试
         System.out.println("************ Bean Annotation ********************");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("iocOverview.denpendencyLookup");
+        context.scan("iocOverview.dependencyLookup");
         context.refresh();
         User user = context.getBean(User.class);
         System.out.println(user);

@@ -1,4 +1,4 @@
-package iocOverview.denpendencyLookup;
+package iocOverview.dependencyLookup;
 
 import iocOverview.domain.User;
 import org.springframework.context.annotation.Bean;
