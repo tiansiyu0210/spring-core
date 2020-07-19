@@ -21,15 +21,8 @@ public class DependencyLookupDemo {
         lookupByType(beanFactory);
         lookupByCollectionType(beanFactory);
         lookupByAnnotation(beanFactory);
-
-        //我自己用@Bean annotation 试一试
-        System.out.println("************ Bean Annotation ********************");
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("iocOverview.dependencyLookup");
-        context.refresh();
-        User user = context.getBean(User.class);
-        System.out.println(user);
     }
+
 
     private static void lookupByAnnotation(BeanFactory beanFactory) {
         if(beanFactory instanceof ListableBeanFactory){

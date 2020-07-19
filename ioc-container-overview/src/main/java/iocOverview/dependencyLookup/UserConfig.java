@@ -13,4 +13,12 @@ public class UserConfig {
         myUser.setName("Siyu");
         return myUser;
     }
+
+    @Bean("configUser1")
+    public User getUser1(){
+        User myUser = new User();
+        myUser.setId(3L);
+        myUser.setName("Siyu1");
+        return myUser;
+    }
 }
