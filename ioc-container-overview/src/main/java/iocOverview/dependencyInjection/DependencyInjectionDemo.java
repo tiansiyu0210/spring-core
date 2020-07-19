@@ -2,11 +2,8 @@ package iocOverview.dependencyInjection;
 
 import iocOverview.dependencyLookup.UserConfig;
 import iocOverview.userRepository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.applet.AppletContext;
+import org.springframework.core.env.Environment;
 
 public class DependencyInjectionDemo {
 
@@ -21,5 +18,11 @@ public class DependencyInjectionDemo {
         System.out.println(userRepository.getApplicationContextObjectFactory());
         System.out.println(userRepository.getObjectFactory().getObject());
         System.out.println(context == userRepository.getApplicationContextObjectFactory());
+
+        //container build-in bean
+        Environment environment1 = context.getBean(Environment.class);
+        Environment environment2 = context.getEnvironment();
+        System.out.println(environment1 == environment2);
+        System.out.println("get Environment bean: " + environment1);
     }
 }

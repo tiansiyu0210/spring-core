@@ -4,7 +4,6 @@ import iocOverview.dependencyLookup.UserConfig;
 import iocOverview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,7 @@ public class UserRepository {
 
     private final UserConfig userConfig;
 
-    //inject build-in non-bean
+    //inject build-in dependency
     private BeanFactory beanFactory;
 
     private ObjectFactory<List<User>> objectFactory;
