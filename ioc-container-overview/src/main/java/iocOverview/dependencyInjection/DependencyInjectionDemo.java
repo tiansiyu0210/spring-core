@@ -24,5 +24,8 @@ public class DependencyInjectionDemo {
         Environment environment2 = context.getEnvironment();
         System.out.println(environment1 == environment2);
         System.out.println("get Environment bean: " + environment1);
+
+        //note:
+        //BeanFactory 是 Bean 容器，它不提供企业特性，比如 AOP、事务以及 事件等，这些都被 ApplicationContext 支持。
     }
 }
